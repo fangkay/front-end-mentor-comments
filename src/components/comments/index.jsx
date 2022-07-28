@@ -6,7 +6,6 @@ export const Comments = (props) => {
 
   return (
     <div>
-      <h1>Comments</h1>
       {props.comments.map((c) => {
         return (
           <Comment key={c.id}>
