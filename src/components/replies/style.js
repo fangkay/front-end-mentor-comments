@@ -1,7 +1,11 @@
 import styled from "styled-components";
 
-export const Reply = styled.div`
-  border: 1px solid pink;
-  padding: 1rem;
-  margin: 1rem;
+const SingleReply = styled.div`
+  border: 1px solid red;
 `;
+
+const allReplies = styled.div`
+  border: 1px solid blue;
+`;
+
+export { SingleReply };

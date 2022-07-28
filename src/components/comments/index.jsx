@@ -1,19 +1,36 @@
 import { Replies } from "../replies";
-import { Comment } from "./style";
+import {
+  Comment,
+  CommentContent,
+  CommentCounter,
+  CommentCurrentScore,
+  CommentProfile,
+  CommentScore,
+  MainComment,
+  ProfileName,
+} from "./style";
 
 export const Comments = (props) => {
-  console.log("what is props", props);
-
   return (
     <div>
       {props.comments.map((c) => {
         return (
           <Comment key={c.id}>
-            {c.content}
-            {c.createdAt}
-            {c.score}
-            {c.user.username}
-            <img src={c.user.image.png} alt=""></img>
+            <MainComment>
+              <CommentScore>
+                <CommentCounter>+</CommentCounter>
+                <CommentCurrentScore>{c.score}</CommentCurrentScore>
+                <CommentCounter>-</CommentCounter>
+              </CommentScore>
+              <CommentContent>
+                <CommentProfile>
+                  <img src={c.user.image.png} alt=""></img>
+                  <ProfileName>{c.user.username}</ProfileName>
+                  {c.createdAt}
+                </CommentProfile>
+                {c.content}
+              </CommentContent>
+            </MainComment>
             {c.replies.map((r) => {
               return (
                 <Replies

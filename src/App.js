@@ -1,6 +1,7 @@
 import "./App.css";
 import { Comments } from "./components/comments";
 import { SubmitComment } from "./components/submitComment";
+import { GlobalStyle } from "./globalStyles";
 
 const data = require("./data.json");
 
@@ -9,6 +10,7 @@ function App() {
 
   return (
     <div className="App">
+      <GlobalStyle />
       <Comments comments={comments} />
       <SubmitComment currentUser={currentUser} />
     </div>
