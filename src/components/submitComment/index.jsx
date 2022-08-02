@@ -1,15 +1,20 @@
-import { Submit } from "./style";
+import { CommentFieldInput, Submit, SubmitCommentField } from "./style";
 
 export const SubmitComment = (props) => {
   const addComment = () => {};
 
+  // console.log("what is SubmitComment props", props);
+
   return (
     <Submit>
       <img src={props.currentUser.image.png} alt=""></img>
-      <form>
-        <input type="text" placeholder="Add a comment..."></input>
-        <button onClick={() => addComment()}>Send</button>
-      </form>
+      <SubmitCommentField>
+        <CommentFieldInput type="text" placeholder="Add a comment..." />
+      </SubmitCommentField>
+      {/* <form>
+        <input className="" type="text" placeholder="Add a comment..."></input>
+      </form> */}
+      <button onClick={() => addComment()}>Send</button>
     </Submit>
   );
 };

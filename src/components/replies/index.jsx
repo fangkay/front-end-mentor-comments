@@ -3,15 +3,14 @@ import {
   CommentCounter,
   CommentCurrentScore,
   CommentScore,
-  Divider,
-  MainComment,
   ProfileName,
 } from "../comments/style";
-import { SingleReply } from "./style";
+
+import { Reply } from "./style";
 
 export const Replies = (props) => {
   return (
-    <MainComment>
+    <Reply>
       <CommentScore>
         <CommentCounter>+</CommentCounter>
         <CommentCurrentScore>{props.score}</CommentCurrentScore>
@@ -23,6 +22,6 @@ export const Replies = (props) => {
         {props.content}
         <img src={props.image} alt=""></img>
       </CommentContent>
-    </MainComment>
+    </Reply>
   );
 };

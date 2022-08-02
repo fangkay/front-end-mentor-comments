@@ -1,12 +1,6 @@
 import styled from "styled-components";
 
-const Comment = styled.div`
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 4px 4px 8px -4px rgba(0, 0, 0, 0.2);
-  padding: 1rem;
-  margin: 1rem;
-`;
+const Comment = styled.div``;
 
 const CommentScore = styled.div`
   display: flex;
@@ -39,6 +33,11 @@ const CommentProfile = styled.div`
 const MainComment = styled.div`
   display: flex;
   align-items: center;
+  background-color: #fff;
+  box-shadow: 4px 4px 8px -4px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem;
 `;
 
 const ProfileName = styled.h4`

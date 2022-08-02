@@ -1,4 +1,5 @@
 import { Replies } from "../replies";
+import { AllReplies } from "../replies/style";
 import {
   Comment,
   CommentContent,
@@ -31,19 +32,21 @@ export const Comments = (props) => {
                 {c.content}
               </CommentContent>
             </MainComment>
-            {c.replies.map((r) => {
-              return (
-                <Replies
-                  props={r}
-                  key={r.id}
-                  content={r.content}
-                  image={r.user.image.png}
-                  createdAt={r.createdAt}
-                  score={r.score}
-                  username={r.user.username}
-                />
-              );
-            })}
+            <AllReplies>
+              {c.replies.map((r) => {
+                return (
+                  <Replies
+                    props={r}
+                    key={r.id}
+                    content={r.content}
+                    image={r.user.image.png}
+                    createdAt={r.createdAt}
+                    score={r.score}
+                    username={r.user.username}
+                  />
+                );
+              })}
+            </AllReplies>
           </Comment>
         );
       })}
