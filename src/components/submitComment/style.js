@@ -14,6 +14,7 @@ const Submit = styled.div`
 
 const SubmitCommentField = styled.form`
   height: 100%;
+  width: auto;
 `;
 
 const CommentFieldInput = styled.input`
